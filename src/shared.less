@@ -1,0 +1,29 @@
+@color-black: black;
+@color-white: white;
+@height-header: 64px;
+@height-body: calc(100vh - @height-header);
+
+.normal-foreground {
+  color: @color-black;
+}
+
+.normal-background {
+  background-color: @color-white;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+.none-selectable {
+  user-select: none;
+}
+
+.disable {
+  cursor: not-allowed !important;
+  opacity: 0.3;
+}
+
+.float-right {
+  float: right;
+}

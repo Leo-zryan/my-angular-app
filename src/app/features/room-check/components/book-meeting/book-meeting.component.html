@@ -1,0 +1,42 @@
+<div>
+  <List [className]="'date-picker-list'">
+    <ListItem
+      DatePicker
+      [extra]="formatDateTime(startTime)"
+      [arrow]="'horizontal'"
+      [mode]="'time'"
+      [minDate]="minTime"
+      [maxDate]="maxTime"
+      [minuteStep]="15"
+      [(ngModel)]="startTime"
+      (onOk)="onStartTimeOk()"
+    >
+      {{ 'StartTime' | translate }}
+    </ListItem>
+    <ListItem
+      Picker
+      [extra]="formatNumber(duration)"
+      [arrow]="'horizontal'"
+      [data]="dsDurations | async"
+      [(ngModel)]="duration"
+      (ngModelChange)="onDurationChange()"
+    >
+      {{ 'Duration' | translate }}
+    </ListItem>
+    <ListItem
+      DatePicker
+      [extra]="formatDateTime(endTime)"
+      [minDate]="minTime"
+      [maxDate]="maxTime"
+      [arrow]="'horizontal'"
+      [disabled]="true"
+    >
+      {{ 'EndTime' | translate }}
+    </ListItem>
+    <ListItem>
+      <div Button [type]="'primary'" (onClick)="onSubmitClick()">
+        {{ 'Submit' | translate }}
+      </div>
+    </ListItem>
+  </List>
+</div>

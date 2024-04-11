@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Provide sufficient contrast against white background */
+@import 'node_modules/ng-zorro-antd/ng-zorro-antd.less';
+@import 'node_modules/angular-calendar/css/angular-calendar.css';
+@import './shared.less';
+
+body {
+  .normal-background();
+  overflow-x: hidden;
+}
+
+.actions-list {
+  margin: 16px;
+
+  nz-space {
+    .ant-space-item {
+      margin-right: 0 !important;
+
+      button {
+        margin-right: 8px;
+      }
+    }
+  }
+}
+
+.search-box {
+  padding: 8px;
+
+  input,
+  nz-select {
+    width: 188px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  button {
+    width: 90px;
+  }
+
+  nz-range-picker {
+    margin-bottom: 8px;
+  }
+
+  .button-search {
+    margin-left: 8px;
+  }
+}
+
+.inner-content {
+  background: #fff;
+  padding: 24px;
+  max-height: calc(100vh - @height-header);
+  overflow-y: auto;
+  .form-title {
+    margin-bottom: 0;
+  }
+  .row-list {
+    width: 100%;
+  }
+}
+
+.option-icon {
+  position: relative;
+  top: 7px;
+}

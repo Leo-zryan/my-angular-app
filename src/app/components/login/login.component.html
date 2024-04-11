@@ -1,0 +1,35 @@
+<nz-modal
+  [nzVisible]="true"
+  nzTitle="Login"
+  [nzClosable]="false"
+  [nzFooter]="null"
+>
+  <ng-container *nzModalContent>
+    <nz-input-group
+      nzSearch
+      nzSize="large"
+      [nzAddOnBefore]="prefixTemplate"
+      [nzAddOnAfter]="suffixTemplate"
+    >
+      <input
+        type="password"
+        [(ngModel)]="password"
+        nz-input
+        placeholder="input password"
+      />
+    </nz-input-group>
+    <ng-template #prefixTemplate>
+      <span nz-icon nzType="lock" nzTheme="outline"></span>
+    </ng-template>
+    <ng-template #suffixTemplate>
+      <button
+        nz-button
+        nzType="primary"
+        nzSize="large"
+        (click)="onLoginClick()"
+      >
+        Login
+      </button>
+    </ng-template>
+  </ng-container>
+</nz-modal>

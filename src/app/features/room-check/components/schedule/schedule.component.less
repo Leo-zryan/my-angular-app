@@ -1,0 +1,21 @@
+@import 'src/shared.less';
+
+.schedule {
+  .actions {
+    @margin: 10px;
+    position: fixed;
+    right: @margin;
+    top: calc(@margin + @height-header);
+    cursor: pointer;
+    opacity: 0.5;
+    z-index: 999;
+  }
+  .row-content {
+    overflow-y: auto;
+    max-height: @height-body;
+    .calendar {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
